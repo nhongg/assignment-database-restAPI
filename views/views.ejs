@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hiển thị dữ liệu</title>
+</head>
+<body>
+  <h1>Danh mục (Category)</h1>
+  <ul>
+    <% categories.forEach(function(category) { %>
+      <li><%= category.CateName %></li>
+    <% }); %>
+  </ul>
+
+  <h1>Sản phẩm (Product)</h1>
+  <ul>
+    <% products.forEach(function(product) { %>
+      <li><%= product.ProductName %> - <%= product.Price %></li>
+    <% }); %>
+  </ul>
+
+  <h1>Hóa đơn (Bill)</h1>
+  <ul>
+    <% bills.forEach(function(bill) { %>
+      <li><%= bill.BID %> - <%= bill.Date %></li>
+    <% }); %>
+  </ul>
+
+  <h1>Chi tiết hóa đơn (Bill Detail)</h1>
+  <ul>
+    <% billdetails.forEach(function(billdetail) { %>
+      <li><%= billdetail.BIIIID %> - <%= billdetail.Quantity %></li>
+    <% }); %>
+  </ul>
+
+  <h1>Tài khoản (Account)</h1>
+  <ul>
+    <% accounts.forEach(function(account) { %>
+      <li><%= account.Email %> - <%= account.FullName %></li>
+    <% }); %>
+  </ul>
+</body>
+</html>
